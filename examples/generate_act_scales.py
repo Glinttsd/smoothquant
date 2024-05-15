@@ -7,8 +7,10 @@ from transformers import (
 )
 import argparse
 
+import os,sys
+BASE_DIR = os.path.dirname( os.path.dirname( os.path.abspath(__file__) ) )
+sys.path.append(BASE_DIR)
 from smoothquant.calibration import get_act_scales
-
 
 def build_model_and_tokenizer(model_name):
     tokenizer = AutoTokenizer.from_pretrained(model_name, model_max_length=512)

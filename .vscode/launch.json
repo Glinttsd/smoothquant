@@ -1,0 +1,24 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "args": [
+                "--model-name","/data/shidi/LLM_models/facebook/opt-125m",
+                "--output-path", "/home/shidi/smoothquant/act_scales/opt-125m.pt",
+                "--num-samples", "512",
+                "--seq-len", "1000",
+                "--dataset-path", "/data/shidi/Datasets/Pile/val.jsonl.zst",
+        ],
+        // "env": {"CUDA_VISIBLE_DEVICES":"1"},
+        "console": "integratedTerminal",
+        "justMyCode": false
+    }
+    ]
+}
